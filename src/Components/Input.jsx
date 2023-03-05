@@ -5,6 +5,7 @@ export default function Input(props) {
   const inputBox = useRef();
 
   return (
+
     <div className="p-3 flex justify-around">
       <input
         type="text"
@@ -15,6 +16,7 @@ export default function Input(props) {
 
       <div className="cursor-pointer ml-2 mt-1 rounded-full text-white text-3xl  w-[50px] h-[50px] bg-[#3F6634] flex justify-center items-center " onClick={
             () => {
+              inputBox.current.value && 
               props.add(inputBox.current.value)
                inputBox.current.value = "";  //empties the input bar after adding 
                }} >
